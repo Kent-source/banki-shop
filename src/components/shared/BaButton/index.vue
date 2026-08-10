@@ -1,5 +1,5 @@
 <template>
-  <button class="ba-button">
+  <button class="ba-button" :style="{ 'max-width': maxWidth }">
     <slot></slot>
   </button>
 </template>
