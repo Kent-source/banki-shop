@@ -1,0 +1,13 @@
+.ba-default-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.ba-default-header__search {
+  width: 100%;
+  max-width: 416px;
+}
