@@ -1,11 +1,11 @@
 <template>
-  <header class="ba-default-header">
+  <div class="ba-default-header">
     <BaMainNavigation />
 
     <div class="ba-default-header__search">
       <BaSearchBlock placeholder="Поиск по названию картины" />
     </div>
-  </header>
+  </div>
 </template>
 
 <script src="./index.ts" lang="ts"></script>

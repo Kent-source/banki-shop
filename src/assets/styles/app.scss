@@ -1,6 +1,8 @@
 :root {
   --ba-text-primary: rgba(52, 48, 48, 1);
 
+  --ba-text-light: rgba(85, 85, 85, 1);
+
   --ba-text-secondary: rgba(159, 159, 159, 1);
 
   --ba-text-white: rgba(255, 255, 255, 1);
@@ -32,7 +34,10 @@
 }
 
 body {
-  min-height: 100%;
+  width: 100dvw;
+  min-height: 100dvh;
+
+  display: flex;
 
   color: var(--ba-text-primary);
 
@@ -41,6 +46,13 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+#app {
+  width: 100%;
+
+  display: flex;
+  flex-grow: 1;
 }
 
 a {

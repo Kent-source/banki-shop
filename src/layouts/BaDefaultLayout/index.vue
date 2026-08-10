@@ -1,14 +1,20 @@
 <template>
   <main class="ba-default-layout">
-    <div class="ba-default-layout__header">
+    <header class="ba-default-layout__header">
       <div class="ba-default-layout__header-content ba-content-container">
         <BaDefaultHeader />
       </div>
-    </div>
+    </header>
 
-    <div class="ba-default-layout__body">
+    <article class="ba-default-layout__body">
       <router-view></router-view>
-    </div>
+    </article>
+
+    <footer class="ba-default-layout__footer">
+      <div class="ba-default-layout__footer-content ba-content-container">
+        <BaDefaultFooter />
+      </div>
+    </footer>
   </main>
 </template>
 
