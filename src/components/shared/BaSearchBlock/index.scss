@@ -1,0 +1,21 @@
+.ba-search-block {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.ba-search-block__input {
+  padding: 12px 16px 13px 15px;
+  border: 1px solid var(--ba-border-primary);
+  border-right: none;
+
+  display: flex;
+  flex-grow: 1;
+
+  color: var(--ba-text-primary);
+
+  &::placeholder {
+    color: var(--ba-text-secondary);
+  }
+}
