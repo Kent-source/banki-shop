@@ -1,0 +1,14 @@
+.ba-button {
+  width: fit-content;
+  padding: 14px 30px 13px 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  background-color: var(--ba-button-primary);
+
+  color: var(--ba-text-white);
+  font-weight: 700;
+}
