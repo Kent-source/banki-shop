@@ -1,0 +1,25 @@
+.ba-default-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.ba-default-layout__header {
+  width: 100%;
+  border-bottom: 1px solid var(--ba-border-primary);
+
+  display: flex;
+  justify-content: center;
+}
+
+.ba-default-layout__header-content {
+  padding: 24px 0 24px 96px;
+
+  display: flex;
+  align-items: center;
+  gap: 66px;
+}
+
+.ba-default-layout__body {
+  display: flex;
+  flex-grow: 1;
+}
