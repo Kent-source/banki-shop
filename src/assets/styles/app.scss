@@ -1,6 +1,10 @@
 :root {
   --ba-text-primary: rgba(52, 48, 48, 1);
 
+  --ba-text-secondary: rgba(159, 159, 159, 1);
+
+  --ba-text-white: rgba(255, 255, 255, 1);
+
   --ba-button-primary: rgba(64, 52, 50, 1);
 
   --ba-button-hover: rgba(119, 103, 99, 1);
@@ -22,6 +26,9 @@
   padding: 0;
 
   font-family: Merriweather;
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 14px;
 }
 
 body {
@@ -42,6 +49,11 @@ a {
   text-decoration: none;
 
   color: var(--ba-text-primary);
+}
+
+input {
+  outline: unset;
+  border: unset;
 }
 
 img {
