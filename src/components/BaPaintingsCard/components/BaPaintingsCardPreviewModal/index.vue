@@ -3,7 +3,15 @@
     <BaModalWindow v-if="isOpen" @onClose="emitCloseModal">
       <template>
         <div class="ba-paintings-card-preview-modal__content">
-          <div class="ba-paintings-card-preview-modal__content-carousel"></div>
+          <carousel class="ba-paintings-card-preview-modal__content-carousel" perPage="1">
+            <slide
+              class="ba-paintings-card-preview-modal__content-carousel-slide"
+              v-for="(image, index) in paintingData.images"
+              :key="index"
+            >
+              <img class="ba-image-container" :src="getPaintingImageUrl(image)" :alt="paintingData.label" />
+            </slide>
+          </carousel>
 
           <div class="ba-paintings-card-preview-modal__content-info">
             <span class="ba-paintings-card-preview-modal__content-info-text"> «{{ paintingData.label }}» </span>

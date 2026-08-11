@@ -1,9 +1,10 @@
 export interface IPainting {
   id: string;
-  image: string;
+  mainImage: string;
   label: string;
   painter: string;
   price: string;
   discountPrice: string;
   isSold: boolean;
+  images: Array<string>;
 }

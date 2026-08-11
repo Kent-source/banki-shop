@@ -5,6 +5,8 @@ import BaPaintingsCardPreviewModal from './components/BaPaintingsCardPreviewModa
 
 import { IPainting } from '@/shared/types/painting';
 import { EnumKeyLocalStorage } from '@/shared/configs/localStorage';
+import { IButtonConfig } from './types.js';
+import { getImageUrl } from '@/shared/helpers/getImageUrl';
 
 export default Vue.extend({
   name: 'BaPaintingsCard',
@@ -36,7 +38,7 @@ export default Vue.extend({
   },
 
   computed: {
-    buttonConfig() {
+    buttonConfig(): IButtonConfig {
       if (this.isExistPaintingInCart) {
         return {
           maxWidth: '118px',
@@ -54,8 +56,8 @@ export default Vue.extend({
   },
 
   methods: {
-    getImageUrl(name: string) {
-      return require(`@/assets/images/painting/${name}`);
+    getPaintingImageUrl(name: string) {
+      return getImageUrl(`painting/${name}`);
     },
 
     addToCart() {

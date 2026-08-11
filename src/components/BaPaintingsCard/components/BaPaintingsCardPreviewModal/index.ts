@@ -2,9 +2,11 @@ import Vue, { PropType } from 'vue';
 
 import BaModalWindow from '@/components/shared/BaModalWindow/index.vue';
 import BaButton from '@/components/shared/BaButton/index.vue';
+import { Carousel, Slide } from 'vue-carousel';
 
 import { IPainting } from '@/shared/types/painting';
 import { IButtonConfig } from '../../types';
+import { getImageUrl } from '@/shared/helpers/getImageUrl';
 
 export default Vue.extend({
   name: 'BaPaintingsCardPreviewModal',
@@ -12,6 +14,8 @@ export default Vue.extend({
   components: {
     BaModalWindow,
     BaButton,
+    Carousel,
+    Slide,
   },
 
   props: {
@@ -35,6 +39,10 @@ export default Vue.extend({
   },
 
   methods: {
+    getPaintingImageUrl(name: string) {
+      return getImageUrl(`painting/${name}`);
+    },
+
     emitCloseModal() {
       this.$emit('onClose');
     },

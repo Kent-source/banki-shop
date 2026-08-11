@@ -1,7 +1,7 @@
 <template>
   <div class="ba-paintings-card" :class="{ 'ba-paintings-card_sold': paintingData.isSold }">
-    <div class="ba-paintings-card__image-wrapper">
-      <img class="ba-image-container" :src="getImageUrl(paintingData.image)" :alt="'imageAltText'" />
+    <div class="ba-paintings-card__image-wrapper" @click="handleOpenPreviewModal(true)">
+      <img class="ba-image-container" :src="getPaintingImageUrl(paintingData.mainImage)" :alt="'imageAltText'" />
     </div>
 
     <div class="ba-paintings-card__info" @click="handleOpenPreviewModal(true)">
