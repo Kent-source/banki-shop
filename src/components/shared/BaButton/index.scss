@@ -13,9 +13,13 @@
 
   color: var(--ba-text-white);
   font-weight: 700;
+  white-space: nowrap;
+  text-wrap: nowrap;
 
-  &:hover {
-    background-color: var(--ba-button-hover);
+  @media screen and (min-width: 1279px) {
+    &:hover {
+      background-color: var(--ba-button-hover);
+    }
   }
 }
 

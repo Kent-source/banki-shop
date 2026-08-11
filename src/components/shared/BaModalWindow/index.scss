@@ -21,7 +21,10 @@
 
 .ba-modal-window__content {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
   margin: auto;
   width: 512px;
@@ -33,4 +36,11 @@
   z-index: 2;
 
   overflow: hidden;
+
+  @media screen and (max-width: 899px) {
+    width: 100%;
+    top: unset;
+
+    margin: auto 0;
+  }
 }
