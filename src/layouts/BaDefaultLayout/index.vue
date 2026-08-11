@@ -6,9 +6,9 @@
       </div>
     </header>
 
-    <article class="ba-default-layout__body">
+    <div class="ba-default-layout__body ba-content-container">
       <router-view></router-view>
-    </article>
+    </div>
 
     <footer class="ba-default-layout__footer">
       <div class="ba-default-layout__footer-content ba-content-container">

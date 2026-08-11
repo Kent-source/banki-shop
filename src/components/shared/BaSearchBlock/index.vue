@@ -2,7 +2,7 @@
   <div class="ba-search-block">
     <input class="ba-search-block__input" :placeholder="placeholder" />
 
-    <BaButton> Найти </BaButton>
+    <BaButton maxWidth="122px"> Найти </BaButton>
   </div>
 </template>
 

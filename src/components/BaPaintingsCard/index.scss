@@ -1,0 +1,86 @@
+.ba-paintings-card {
+  position: relative;
+
+  width: 100%;
+  border: 1px solid var(--ba-border-primary);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.ba-paintings-card_sold {
+  &::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    margin: 0;
+
+    background-color: var(--ba-background-white);
+    opacity: 0.4;
+
+    cursor: not-allowed;
+  }
+}
+
+.ba-paintings-card__image-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+
+  cursor: pointer;
+}
+
+.ba-paintings-card__info {
+  width: 100%;
+  padding: 0 24px;
+  margin-bottom: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+}
+
+.ba-paintings-card__info-text {
+  font-size: 18px;
+}
+
+.ba-paintings-card__footer {
+  width: 100%;
+  padding: 0 24px;
+  margin-bottom: 26px;
+
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.ba-paintings-card__footer-prices {
+  display: flex;
+  flex-direction: column;
+}
+
+.ba-paintings-card__footer-prices-previous {
+  color: var(--ba-text-grey-light);
+  text-decoration: line-through;
+}
+
+.ba-paintings-card__footer-prices-current {
+  font-size: 16px;
+}
+
+.ba-paintings-card__footer-sold-info {
+  width: 100%;
+
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.ba-paintings-card__footer-sold-info-text {
+  font-size: 16px;
+  font-weight: 700;
+}
