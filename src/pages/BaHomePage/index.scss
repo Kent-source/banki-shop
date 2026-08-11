@@ -7,10 +7,29 @@
   gap: 39px;
 }
 
-.ba-home-page__gallery {
+.ba-home-page__paintings {
+  width: 100%;
+
+  display: flex;
+}
+
+.ba-home-page__paintings-gallery {
   width: 100%;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
+}
+
+.ba-home-page__paintings-gallery-empty {
+  width: 100%;
+  padding: 24px 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.ba-home-page__paintings-gallery-empty-text {
+  font-size: 18px;
+  font-weight: 700;
 }

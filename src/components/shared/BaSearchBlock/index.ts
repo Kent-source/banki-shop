@@ -14,4 +14,12 @@ export default Vue.extend({
       type: String,
     },
   },
+
+  methods: {
+    handleInput(event: Event) {
+      const inputValue = (event.target as HTMLInputElement).value;
+
+      this.$emit('onInput', inputValue);
+    },
+  },
 });

@@ -3,7 +3,7 @@
     <BaMainNavigation />
 
     <div class="ba-default-header__search">
-      <BaSearchBlock placeholder="Поиск по названию картины" />
+      <BaSearchBlock placeholder="Поиск по названию картины" @onInput="setQueryForSearch" />
     </div>
   </div>
 </template>

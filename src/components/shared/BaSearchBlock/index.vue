@@ -1,6 +1,6 @@
 <template>
   <div class="ba-search-block">
-    <input class="ba-search-block__input" :placeholder="placeholder" />
+    <input class="ba-search-block__input" :placeholder="placeholder" @input="(event) => handleInput(event)" />
 
     <BaButton maxWidth="122px"> Найти </BaButton>
   </div>

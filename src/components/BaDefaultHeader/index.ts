@@ -10,4 +10,22 @@ export default Vue.extend({
     BaMainNavigation,
     BaSearchBlock,
   },
+
+  methods: {
+    setQueryForSearch(searchString: string) {
+      if (!searchString) {
+        this.$router.push({
+          query: undefined,
+        });
+
+        return;
+      }
+
+      this.$router.push({
+        query: {
+          search: searchString,
+        },
+      });
+    },
+  },
 });

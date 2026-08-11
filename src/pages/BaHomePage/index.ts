@@ -13,7 +13,27 @@ export default Vue.extend({
 
   data() {
     return {
-      paintingsList,
+      filteredPaintingsList: [...paintingsList],
     };
+  },
+
+  watch: {
+    '$route.query.search': function (searchString: string) {
+      this.filterPaintingList(searchString);
+    },
+  },
+
+  methods: {
+    filterPaintingList(searchString: string) {
+      if (!searchString) {
+        this.filteredPaintingsList = [...paintingsList];
+
+        return;
+      }
+
+      this.filteredPaintingsList = [...paintingsList].filter(
+        (item) => item.label.toLowerCase().includes(searchString) || item.painter.toLowerCase().includes(searchString),
+      );
+    },
   },
 });
