@@ -10,16 +10,25 @@ export default Vue.extend({
   },
 
   props: {
+    inputValue: {
+      type: String,
+      default: '',
+    },
+
     placeholder: {
       type: String,
     },
   },
 
   methods: {
-    handleInput(event: Event) {
-      const inputValue = (event.target as HTMLInputElement).value;
+    handleInputEvent(event: Event) {
+      const valueFromEvent = (event.target as HTMLInputElement).value;
 
-      this.$emit('onInput', inputValue);
+      this.onInput(valueFromEvent);
+    },
+
+    onInput(string: string) {
+      this.$emit('onInput', string);
     },
   },
 });

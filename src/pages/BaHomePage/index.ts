@@ -3,6 +3,7 @@ import Vue from 'vue';
 import BaPaintingsCard from '@/components/BaPaintingsCard/index.vue';
 
 import { paintingsList } from '@/shared/configs/paintings';
+import { getRouteQuery } from '@/shared/helpers/getRouteQuery';
 
 export default Vue.extend({
   name: 'BaHomePage',
@@ -21,6 +22,10 @@ export default Vue.extend({
     '$route.query.search': function (searchString: string) {
       this.filterPaintingList(searchString);
     },
+  },
+
+  mounted() {
+    this.filterPaintingList(getRouteQuery(this.$route, 'search'));
   },
 
   methods: {
