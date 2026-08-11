@@ -1,5 +1,5 @@
 export interface IPainting {
-  id: number;
+  id: string;
   image: string;
   label: string;
   painter: string;

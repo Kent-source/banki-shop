@@ -26,7 +26,14 @@
           </template>
         </div>
 
-        <BaButton :maxWidth="buttonConfig.maxWidth"> {{ buttonConfig.text }} </BaButton>
+        <BaButton
+          :maxWidth="buttonConfig.maxWidth"
+          :theme="buttonConfig.theme"
+          :isLoading="isLoadingAddToCart"
+          @onClick="addToCart"
+        >
+          {{ buttonConfig.text }}
+        </BaButton>
       </template>
 
       <template v-else>
