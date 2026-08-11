@@ -66,10 +66,14 @@
 .ba-paintings-card__footer-prices-previous {
   color: var(--ba-text-grey-light);
   text-decoration: line-through;
+  white-space: nowrap;
+  text-wrap: nowrap;
 }
 
 .ba-paintings-card__footer-prices-current {
   font-size: 16px;
+  white-space: nowrap;
+  text-wrap: nowrap;
 }
 
 .ba-paintings-card__footer-sold-info {

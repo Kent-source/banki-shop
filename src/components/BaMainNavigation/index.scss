@@ -1,4 +1,8 @@
 .ba-main-navigation {
   display: flex;
   gap: 48px;
+
+  @media screen and (max-width: 1279px) {
+    gap: 18px;
+  }
 }

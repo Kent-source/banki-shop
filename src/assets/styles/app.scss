@@ -39,6 +39,7 @@
 
 body {
   width: 100dvw;
+  max-width: 100dvw;
   min-height: 100dvh;
 
   display: flex;
@@ -46,6 +47,7 @@ body {
   color: var(--ba-text-primary);
 
   overflow-y: auto;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     display: none;
@@ -93,6 +95,7 @@ h1 {
 .ba-content-container {
   width: 100%;
   max-width: 1216px;
+  padding: 0 24px;
 }
 
 .ba-image-container {

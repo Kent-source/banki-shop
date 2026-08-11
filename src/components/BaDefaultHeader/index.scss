@@ -5,6 +5,22 @@
   align-items: center;
   justify-content: space-between;
   gap: 48px;
+
+  @media screen and (max-width: 1279px) {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 899px) {
+    :deep() {
+      .ba-main-navigation {
+        display: none;
+      }
+
+      .ba-default-header__search {
+        max-width: unset;
+      }
+    }
+  }
 }
 
 .ba-default-header__search {

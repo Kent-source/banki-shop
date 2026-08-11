@@ -11,12 +11,35 @@
       color: var(--ba-text-light);
     }
   }
+
+  @media screen and (max-width: 1279px) {
+    flex-direction: column;
+    gap: 36px;
+  }
+  @media screen and (max-width: 899px) {
+    .ba-main-navigation {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .ba-default-footer__info {
+      flex-direction: column;
+    }
+  }
 }
 
 .ba-default-footer__info {
   display: flex;
   align-items: center;
   gap: 51px;
+
+  @media screen and (max-width: 1279px) {
+    gap: 36px;
+  }
+
+  @media screen and (max-width: 899px) {
+    gap: 12px;
+  }
 }
 
 .ba-default-footer__info-mobile {
