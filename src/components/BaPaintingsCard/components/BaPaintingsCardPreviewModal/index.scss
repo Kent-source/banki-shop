@@ -1,0 +1,43 @@
+.ba-paintings-card-preview-modal__content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ba-paintings-card-preview-modal__content-info {
+  margin-bottom: 20px;
+  padding: 0 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ba-paintings-card-preview-modal__content-info-text {
+  font-size: 18px;
+}
+
+.ba-paintings-card-preview-modal__content-footer {
+  padding: 0 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ba-paintings-card-preview-modal__content-footer-prices {
+  display: flex;
+  flex-direction: column;
+}
+
+.ba-paintings-card-preview-modal__content-footer-prices-previous {
+  font-size: 16px;
+  color: var(--ba-text-grey-light);
+  text-decoration: line-through;
+}
+
+.ba-paintings-card-preview-modal__content-footer-prices-current {
+  font-size: 18px;
+}

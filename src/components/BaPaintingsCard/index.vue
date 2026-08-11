@@ -4,7 +4,7 @@
       <img class="ba-image-container" :src="getImageUrl(paintingData.image)" :alt="'imageAltText'" />
     </div>
 
-    <div class="ba-paintings-card__info">
+    <div class="ba-paintings-card__info" @click="handleOpenPreviewModal(true)">
       <span class="ba-paintings-card__info-text"> «{{ paintingData.label }}» </span>
 
       <span class="ba-paintings-card__info-text">
@@ -42,6 +42,15 @@
         </div>
       </template>
     </div>
+
+    <BaPaintingsCardPreviewModal
+      :isOpen="isOpenPreviewModal"
+      :paintingData="paintingData"
+      :buttonConfig="buttonConfig"
+      :isLoadingAddToCart="isLoadingAddToCart"
+      @onClose="handleOpenPreviewModal(false)"
+      @onAddToCart="addToCart"
+    />
   </div>
 </template>
 

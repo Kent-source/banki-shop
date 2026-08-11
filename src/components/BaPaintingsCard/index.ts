@@ -1,7 +1,9 @@
 import Vue, { PropType } from 'vue';
 
-import { IPainting } from '@/shared/types/painting';
 import BaButton from '@/components/shared/BaButton/index.vue';
+import BaPaintingsCardPreviewModal from './components/BaPaintingsCardPreviewModal/index.vue';
+
+import { IPainting } from '@/shared/types/painting';
 import { EnumKeyLocalStorage } from '@/shared/configs/localStorage';
 
 export default Vue.extend({
@@ -9,6 +11,7 @@ export default Vue.extend({
 
   components: {
     BaButton,
+    BaPaintingsCardPreviewModal,
   },
 
   props: {
@@ -24,6 +27,7 @@ export default Vue.extend({
 
       isExistPaintingInCart: false,
       isLoadingAddToCart: false,
+      isOpenPreviewModal: false,
     };
   },
 
@@ -83,6 +87,10 @@ export default Vue.extend({
       }
 
       return JSON.parse(localStorageCartData);
+    },
+
+    handleOpenPreviewModal(isOpen: boolean) {
+      this.isOpenPreviewModal = isOpen;
     },
   },
 });
